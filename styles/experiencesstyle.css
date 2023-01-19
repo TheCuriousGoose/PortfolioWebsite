@@ -1,0 +1,195 @@
+/*
+    Made by: Justin Lama Perez
+    Date: 18-01-2023
+*/
+html
+{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #141B25;
+    user-select: none;
+    overflow-x:hidden;
+    scroll-behavior: smooth;
+
+}
+#bgFade{
+    position: absolute;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background: linear-gradient(169.67deg, #1E3658 -5.37%, #141B25 66.67%);
+    transition: all 0.35s;
+    -webkit-transition: all 0.35s;
+    -moz-transition: all 0.35s;
+    -ms-transition: all 0.35s;
+    -o-transition: all 0.35s;
+}
+#languageselector
+{
+    display: flex;
+    position: absolute;
+    right: 40px;
+    cursor: pointer;
+    z-index: 3010;
+    height: 34px;
+}
+#english{
+    display: none;
+    height: 34px;
+    width: 50px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+#dutch
+{
+    width: 50px;
+    height: 34px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+* {
+    scrollbar-width: none;
+    scrollbar-color: #969098 #ffffff;
+}
+
+  /* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 3px;
+}
+
+*::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #969098;
+    border-radius: 11px;
+    border: 3px solid rgba(0, 0, 0, 0);
+}
+a
+{
+    scroll-behavior: smooth;
+}
+.content
+{
+    width: 66.7vw;
+    max-width: 961px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 170px;
+    height: 1250px;
+    z-index: 40;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    -webkit-transform: translate(-50%, 0%);
+    -moz-transform: translate(-50%, 0%);
+    -ms-transform: translate(-50%, 0%);
+    -o-transform: translate(-50%, 0%);
+}
+.section
+{
+    height: 243px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+.section > p, a > h3
+{
+    transform: translate(0px, -188px);
+    -webkit-transform: translate(0px, -188px);
+    -moz-transform: translate(0px, -188px);
+    -ms-transform: translate(0px, -188px);
+    -o-transform: translate(0px, -188px);
+}
+.section > h2 
+{
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+    font-size: 30px;
+    letter-spacing: 0.04em;
+    color: #A6A6A6;
+    opacity: 0.6;
+}
+.line
+{
+    margin-top: -20px;
+    margin-left: 55px;
+    width: 3px;
+    height: 200px;
+    background-color: #A6A6A6;
+    opacity: 0.3;
+}
+.section > a > h3
+{
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    color: #FFFFFF;
+    margin-left: 95px;
+    text-align: left;
+}
+.section > p
+{
+    width: 42vw;
+    max-width: 605px;
+    color: white;
+    font-family: 'Merriweather', serif;
+    font-size: 15px;
+    margin-left: 95px;
+    margin-top: -30px;
+    transform: translate(0px, -380px);
+    -webkit-transform: translate(0px, -380px);
+    -moz-transform: translate(0px, -380px);
+    -ms-transform: translate(0px, -380px);
+    -o-transform: translate(0px, -380px);
+}
+a > h3 > span 
+{
+    color: #A6A6A6;
+    opacity: 0.7;
+    font-family: 'Merriweather', sans-serif;
+    font-size: 15px;
+    margin-left: 10px;
+}
+.section > p:last-of-type
+{
+    margin-top: 20px;
+    color: #A6A6A6;
+    opacity: 0.6;
+    user-select: text;
+}
+.section > img
+{
+    aspect-ratio: 1 / 1;
+    width: 200px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    transform: translate(700px, -270px);
+    -webkit-transform: translate(700px, -270px);
+    -moz-transform: translate(700px, -270px);
+    -ms-transform: translate(700px, -270px);
+    -o-transform: translate(700px, -270px);
+    object-fit: cover;
+}
+footer
+{
+    top: calc(1400px + 180px);
+}

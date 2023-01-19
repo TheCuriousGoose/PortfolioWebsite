@@ -1,0 +1,272 @@
+/*
+    Made by: Justin Lama Perez
+    Date: 08-01-2023
+*/
+html
+{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #141B25;
+    user-select: none;
+    overflow-x:hidden;
+    scroll-behavior: smooth;
+
+}
+#bgFade{
+    position: absolute;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background: linear-gradient(169.67deg, #1E3658 -5.37%, #141B25 66.67%);
+    transition: all 0.35s;
+    -webkit-transition: all 0.35s;
+    -moz-transition: all 0.35s;
+    -ms-transition: all 0.35s;
+    -o-transition: all 0.35s;
+}
+#mainText{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 99;
+    transition: all 0.35s;
+    -webkit-transition: all 0.35s;
+    -moz-transition: all 0.35s;
+    -ms-transition: all 0.35s;
+    -o-transition: all 0.35s;
+}
+#mainText > h2{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 70%
+}
+#bgFade > div > h1{
+    text-align: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+    text-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+    font-size: 7vw;
+    transition: all 0.35s;
+    -webkit-transition: all 0.35s;
+    -moz-transition: all 0.35s;
+    -ms-transition: all 0.35s;
+    -o-transition: all 0.35s;
+
+}
+#bgFade > div > h2{
+    text-align: center;
+    color: white;
+    font-family: 'Poppins';
+    letter-spacing: 0.08em;
+    font-weight: 500;
+    text-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+    font-size: 2.45vw;
+}
+
+#bgFade > img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    z-index: 98;
+}
+
+#languageselector
+{
+    display: flex;
+    position: absolute;
+    right: 40px;
+    cursor: pointer;
+    z-index: 3010;
+    height: 34px;
+}
+#english{
+    display: none;
+    height: 34px;
+    width: 50px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+#dutch
+{
+    width: 50px;
+    height: 34px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+#content
+{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+* {
+    scrollbar-width: none;
+    scrollbar-color: #969098 #ffffff;
+}
+
+  /* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 3px;
+}
+
+*::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #969098;
+    border-radius: 11px;
+    border: 3px solid rgba(0, 0, 0, 0);
+}
+a
+{
+    scroll-behavior: smooth;
+}
+.down-arrow {
+    position: absolute;
+    top: calc(100vh - 70px);
+    left: calc(50% - 14px);
+    color: white;
+    width: 0;
+    height: 30px;
+    z-index: 3010;
+    animation: jumpInfinite 1.5s infinite;
+    -webkit-animation: jumpInfinite 1.5s infinite;
+}
+  
+.down-arrow:after {
+    content: " ";
+    position: absolute;
+    top: 12px;
+    left: -10px;
+    width: 16px;
+    height: 16px;
+    border-bottom: 4px solid;
+    border-right: 4px solid;
+    border-radius: 4px;
+    transform: rotateZ(45deg);
+}
+@keyframes jumpInfinite {
+    0% {
+      margin-top: 0;
+    }
+    50% {
+      margin-top: 20px;
+    }
+    100% {
+      margin-top: 0;
+    }
+}
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+.whiteborder
+{
+    padding: 10px;
+    border: 0.35vw solid white;
+    display: flex;
+    color: white;
+    height: 25vw;
+    z-index: 3001;
+}
+.imagebox
+{
+    width: 25vw;
+    align-items: center;
+}
+.imagebox > img {
+    width: 25vw;
+}
+.textbox {
+    margin-left: 5px;
+    width: 40vw;
+}
+.textbox > div {
+    width: 100%;
+    height: 75%;
+    margin-top: 10vh;
+}
+.textbox > div >  p {
+    align-self: center;
+    font-family: 'Merriweather';
+    font-size: 1.2vw;
+}
+.textbox > h2 {
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    white-space: nowrap;
+    position: absolute;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 2vw;
+}
+.backgroundimg
+{
+    position: absolute;
+    z-index: 300;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+.backgroundimg > img
+{
+    width: 75vw;
+    transform: translate(0, 30%);
+    -webkit-transform: translate(0, 30%);
+    -moz-transform: translate(0, 30%);
+    -ms-transform: translate(0, 30%);
+    -o-transform: translate(0, 30%);
+}
+#content-wrapper{
+    width: 100vw;
+    min-height: 100vh;
+    padding-bottom: 230px;
+}
+footer{
+    top: calc(180vh + 180px);
+}
+.hovered
+{
+    font-weight: 900;
+    color: #9c9cff;
+    transition: all 0.35s;
+    -webkit-transition: all 0.35s;
+    -moz-transition: all 0.35s;
+    -ms-transition: all 0.35s;
+    -o-transition: all 0.35s;
+}
+.hovered-adjacent
+{
+    font-weight: 800;
+    color: #bdbdfc;
+    transition: all 0.35s;
+    -webkit-transition: all 0.35s;
+    -moz-transition: all 0.35s;
+    -ms-transition: all 0.35s;
+    -o-transition: all 0.35s;
+}

@@ -1,0 +1,271 @@
+/*
+    Made by: Justin Lama Perez
+    Date: 08-01-2023
+*/
+html
+{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #141B25;
+    user-select: none;
+    overflow-x:hidden;
+    scroll-behavior: smooth;
+
+}
+#bgFade{
+    position: absolute;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background: linear-gradient(169.67deg, #1E3658 -5.37%, #141B25 66.67%);
+    transition: all 0.35s;
+    -webkit-transition: all 0.35s;
+    -moz-transition: all 0.35s;
+    -ms-transition: all 0.35s;
+    -o-transition: all 0.35s;
+}
+#languageselector
+{
+    display: flex;
+    position: absolute;
+    right: 40px;
+    cursor: pointer;
+    z-index: 3010;
+    height: 34px;
+}
+#english{
+    display: none;
+    height: 34px;
+    width: 50px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+#dutch
+{
+    width: 50px;
+    height: 34px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+#content
+{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+* {
+    scrollbar-width: none;
+    scrollbar-color: #969098 #ffffff;
+}
+
+  /* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 3px;
+}
+
+*::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #969098;
+    border-radius: 11px;
+    border: 3px solid rgba(0, 0, 0, 0);
+}
+a
+{
+    scroll-behavior: smooth;
+}
+div.left
+{
+    display: flex;
+    position: absolute;
+    top: 80px;
+    width: 50vw;
+    height: 85vh;
+    justify-content: center;
+    align-items: center;
+}
+div.right
+{
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 50vw;
+    height: 85vh;
+    margin: 0 2vw 0 2vw;
+}
+div.left > img 
+{
+    height: 34vw;
+    object-fit: cover;
+    aspect-ratio: 1.05 / 1;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 30px;
+    object-position: 40%;
+    -webkit-user-drag: none;
+    -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    margin: 0 2vw 0 2vw;
+}
+div.left > img:hover
+{
+    height: 36vw;
+    transition: all ease-out .3s;
+    -webkit-transition: all ease-out .3s;
+    -moz-transition: all ease-out .3s;
+    -ms-transition: all ease-out .3s;
+    -o-transition: all ease-out .3s;
+}
+
+div.right > h1 
+{
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 4vw;
+    line-height: 8vh;
+    color: white;
+    text-transform: uppercase;
+    max-width: 40vw;
+    min-width: 500px;
+}
+div.right > p
+{
+    font-family: 'Merriweather';
+    color: white;
+    font-size: 1.6vw;
+    max-width: 40vw;
+    min-width: 500px;
+}
+.down-arrow {
+    position: absolute;
+    top: calc(100vh - 70px);
+    left: calc(50% - 14px);
+    color: white;
+    width: 0;
+    height: 30px;
+    z-index: 3010;
+    animation: jumpInfinite 1.5s infinite;
+    -webkit-animation: jumpInfinite 1.5s infinite;
+}
+  
+.down-arrow:after {
+    content: " ";
+    position: absolute;
+    top: 12px;
+    left: -10px;
+    width: 16px;
+    height: 16px;
+    border-bottom: 4px solid;
+    border-right: 4px solid;
+    border-radius: 4px;
+    transform: rotateZ(45deg);
+}
+@keyframes jumpInfinite {
+    0% {
+      margin-top: 0;
+    }
+    50% {
+      margin-top: 20px;
+    }
+    100% {
+      margin-top: 0;
+    }
+}
+footer{
+    top: calc(190vh + 180px);
+}
+#content
+{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+.hobbys
+{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.card
+{
+    align-items: center;
+    margin-top: 30px;
+    display: flex;
+    width: 60vw;
+    height: 18vw;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    background-color:#561d55;
+    filter: drop-shadow(3px, 3px, 3px, 3px);
+    -webkit-filter: drop-shadow(3px, 3px, 3px, 3px);
+}
+.card:last-of-type
+{
+    margin-bottom: 30px;
+}
+.card:hover
+{
+    width: 62vw;
+    background-color:#742872;
+    transform: translate(0%, -4%);
+    -webkit-transform: translate(0%, -4%);
+    -moz-transform: translate(0%, -4%);
+    -ms-transform: translate(0%, -4%);
+    -o-transform: translate(0%, -4%);
+}
+.card > img
+{
+    width: 11vw;
+    height: 11vw;
+    aspect-ratio: 1 / 1 ;
+    margin-left: 30px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.3));
+    -webkit-filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.3));
+    object-fit: cover;
+    
+}
+.text 
+{
+    width: 40vw;
+    height: 11vw;
+    text-align: left;
+    margin-left: 30px;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+}
+.text > p
+{
+    font-family: 'Merriweather';
+}

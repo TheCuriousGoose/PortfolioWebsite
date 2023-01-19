@@ -1,0 +1,109 @@
+/*
+    Made by: Justin Lama Perez
+    Date: 13-01-2023
+*/
+*
+{
+    transition: all .2s;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+}
+nav{
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    z-index: 100;
+}
+.menubars{
+    display: none;
+}
+#navbar{
+    display: flex;
+    align-items: center;
+}
+div.typewriter > a > h1 {
+    display: inline-flex;
+    color: #8DD0E5;
+    font-family: 'Cascadia Code';
+    letter-spacing: 0.2em;
+    text-align: center;
+    font-size: 30px;
+    padding-left: 20px;
+    overflow: hidden;
+    border-right: .15em solid white;
+    animation: 
+        typing 1s steps(9, end),
+        blink-caret .75s step-end infinite;
+}
+
+div.typewriter > a {
+    text-decoration: none;
+    z-index: 10000;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white; }
+}
+
+div.typewriter > a > h1 > span {
+    color:#E394FF;
+}
+nav > div > div#navitems {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+ul{
+    display: flex;
+    color: white !important;
+    list-style: none;
+    font-family: 'Cascadia Code';
+    text-align: center;
+    justify-content: center;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+ul > li {
+    text-align: center;
+    width:auto;
+}
+ul > li:not(:first-of-type){
+    padding-left: 3vw;
+}
+a
+{
+    text-decoration: none;
+    color: inherit
+}
+ul:hover{
+    color: grey !important;
+}
+ul > li:hover{
+    color:white !important;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    cursor: pointer;
+}

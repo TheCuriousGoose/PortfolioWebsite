@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--
+    Made by: Justin Lama Perez
+    Date: 08-12-2022
+    Changed on: 05-01-2023
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Justin Lama Perez</title>
+    <link rel="stylesheet" href="styles/homestyle.css" media="screen and (min-width: 1101px)">
+    <link rel="stylesheet" media="screen and (max-width: 1100px)" href="styles/phonestyles/phonehomestyle.css">
+    <link rel="stylesheet" media="screen and (min-width: 1101px)" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900|Inter|Merriweather">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="styles/fonts.css" type="text/css">
+    <script src="scripts/animations.js" defer></script>
+    <script type="module" src="scripts/language.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body data-page-name="home">
+    <div id="content-wrapper">
+        <!--Navbar-->
+        <nav>
+            <div id="navbar">
+                <div id="menubars">
+                    <div class="bar1">
+                    </div>
+                    <div class="bar2">
+                    </div>
+                    <div class="bar3">
+                    </div>
+                </div>
+                <div id="languageselector">
+                    <img src="images/flags/netherlands.png" alt="dutch" id="dutch" width="50" height="34">
+                    <img src="images/flags/english.png" alt="english" id="english" width="50" height="34">
+                </div>
+                <div class="centerdiv">
+                    <div class="typewriter">
+                        <a href="index.html" onclick="vibrate()">
+                            <h1>
+                                JUSTIN<span>LP</span>
+                            </h1>
+                        </a>
+                    </div>
+                </div>
+                <div id="navitems">
+                    <ul>
+                        <li><a href="index.html">// home</a></li>
+                        <li><a href="pages/hobby.html" id="hobby">// hobby's</a></li>
+                        <li><a href="pages/portfolio.html">// portfolio</a></li>
+                        <li><a href="pages/experiences.html" id="experience">// ervaringen</a></li>
+                        <li><a href="pages/results.html" id="results">// resultaten</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--Main page content-->
+        <div id="bgFade">
+            <div id="mainText">
+                <h1 class="bubble-hover" id="nameText"></h1>
+                <h2 class="bubble-hover" id="subNameText">Student Software Developer</h2>
+            </div>
+            <img src="images/frontpage/bg_frontpage.png" alt="An image with shapes on it">
+        </div>
+        <div>
+            <a href="#content" aria-label="A down arrow to scroll down the page to the main content">
+                <div class="down-arrow">
+                </div>
+            </a>
+        </div>
+        <div id="content">
+            <div class="whiteborder imagebox">
+                <img src="images/frontpage/temp.jpg" alt="me">
+            </div>
+            <div class="whiteborder textbox">
+                <h2 id="textboxtitle">This is me</h2>
+                <div>
+                    <p id="textboxttext"></p>                
+                </div>
+            </div>
+            <div class="backgroundimg">
+                <img src="images/frontpage/bg_code.png" alt="code">
+            </div>
+        </div>
+        <!--Footer-->
+        <footer>
+            <div class="typewriter">
+                <a href="index.html" onclick="vibrate()">
+                    <h1>
+                        JUSTIN<span>LP</span>
+                    </h1>
+                </a>
+            </div>
+            <div class="footernames">
+                <h2>
+                    Justin Lama Perez
+                </h2>
+                <h3>
+                    justinlamaperez@gmail.com
+                </h3>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
