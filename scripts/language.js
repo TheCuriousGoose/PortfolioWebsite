@@ -1,7 +1,7 @@
 /*
     Made by: Justin Lama Perez
     Date: 12-12-2022
-    Last change: 18-01-2023
+    Last change: 22-01-2023
 */
 
 var dutch = false;
@@ -9,14 +9,19 @@ var dutch = false;
 const el = document.querySelector("body");
 
 //Fetch user ip info with the use of jQuery
-$.get("http://ipinfo.io/?token=c5c3ed73a5eba7", function (response) {
-    // Checks if the response is NL.
-    if(response.country === 'NL'){
-        countryNL();
-    }else{
-        countryEN();
-    }
-}, "jsonp");
+
+try{
+    $.get("http://ipinfo.io/?token=c5c3ed73a5eba7", function (response) {
+        // Checks if the response is NL.
+        if(response.country === 'NL'){
+            countryNL();
+        }else{
+            countryEN();
+        }
+    }, "jsonp");    
+}catch(err){
+    countryNL();
+}
 
 // Displays the country selector
 document.getElementById("languageselector").onclick = function(){
@@ -153,8 +158,11 @@ function resultsPage(country){
         document.getElementById("results").innerText = langData.en.results.results;
         return;
     }
+<<<<<<< Updated upstream
     document.getElementById("results").innerText = langData.en.results.results;
     return;
+=======
+>>>>>>> Stashed changes
 }
 
 const langData = {
@@ -188,9 +196,12 @@ const langData = {
             "action":"Dit was mijn eerste bijbaantje. Persoonlijk vond ik het vakkenvullen helemaal niks. Maar ik had wel hier geleerd dat ik hard moet werken. Naar 4 maanden in dienst te zijn had ik onslag genomen omdat ik niet blij op werk was.",
             "de7dwergen":"Bij De 7 dwergen was ik begonnen te werken naar een paar maanden niet gewerkt te hebben. Ik was hier begonnen in de afwas en naar een maand of 2 ben ik door gestroomd naar de keuken als keukenhulp. Ik werk tot het heden nog steeds.",
             "kw1c":"Dit is de school waar ik momenteel de opleiding Software Developer. Zo ver is de school redelijk fijn en heb ik een gezellig klas. Ik zit in jaar 1. Het is een niveau 4 MBO opleiding."
+<<<<<<< Updated upstream
         },
         "results":{
             "results":"resultaten"
+=======
+>>>>>>> Stashed changes
         }
     },
     "en":{
@@ -218,9 +229,12 @@ const langData = {
             "action":"This was my first parttime job. Personally I didn't like stocking shelves at all. But I did learn there that you have to work hard. After 4 months of working there I quited because I didn't doing my job anymore.",
             "de7dwergen":"I started working at De 7 Dwergen after not having worked for a few months. I started as a dishwasher but after 2 months I went slowly transitioned to the kitchen where I now help. To this day I still work there.",
             "kw1c":"This is my current school where I follow the study Software Developer. So far this school has been enjoyable and I have fun classmates to be around. I am currently in year 1. This is a niveau 4 MBO study."
+<<<<<<< Updated upstream
         },
         "results":{
             "results":"results"
+=======
+>>>>>>> Stashed changes
         }
     }
 }
