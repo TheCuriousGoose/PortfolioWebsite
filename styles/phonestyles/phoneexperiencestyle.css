@@ -2,9 +2,9 @@ body{
     margin: 0;
     padding: 0;
     background-color: #141B25;
-    overflow-x:hidden;
+    overflow-x: hidden;
     user-select: none;
-    width: 100vw;
+    max-width: 100vw;
 }
 /* Position the nav element absolutely and make it the full width and height of the container */
 nav{
@@ -262,9 +262,9 @@ nav > div > div#navItems{
     font-family: 'Oswald', sans-serif;
     font-style: normal;
     font-weight: 400;
+    margin-left: 95px;
     font-size: 30px;
     color: #FFFFFF;
-    margin-left: 95px;
     text-align: left;
     margin-top: 5px;
 }
