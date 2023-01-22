@@ -9,14 +9,13 @@ var dutch = false;
 const el = document.querySelector("body");
 
 //Fetch user ip info with the use of jQuery
-
 try{
     $.get("http://ipinfo.io/?token=c5c3ed73a5eba7", function (response) {
         // Checks if the response is NL.
         if(response.country === 'NL'){
             countryNL();
         }else{
-            countryEN();
+            countryEN();;
         }
     }, "jsonp");    
 }catch(err){
@@ -146,19 +145,30 @@ function experiencesPage(country){
 function portfolioPage(country){
     // Returns the country if the country is EN.
     if(country === "EN"){
-        
+        document.getElementById("de7dwergentext").innerText = langData.en.portfolio.de7dwergentext
+        document.getElementById("portfoliotext").innerText = langData.en.portfolio.portfoliotext
+        document.getElementById("assign4.3").innerText = langData.en.portfolio.assign43
+        document.getElementById("assign4.3text").innerText = langData.en.portfolio.assign43text
+        document.getElementById("assign1.3").innerText = langData.en.portfolio.assign13
+        document.getElementById("assign1.3text").innerText = langData.en.portfolio.assign13text
         return;
     }
+    document.getElementById("de7dwergentext").innerText = langData.nl.portfolio.de7dwergentext
+    document.getElementById("portfoliotext").innerText = langData.nl.portfolio.portfoliotext
+    document.getElementById("assign4.3").innerText = langData.nl.portfolio.assign43
+    document.getElementById("assign4.3text").innerText = langData.nl.portfolio.assign43text
+    document.getElementById("assign1.3").innerText = langData.nl.portfolio.assign13
+    document.getElementById("assign1.3text").innerText = langData.nl.portfolio.assign13text
     return;
 }
 // Returns the results page for the given country.
 function resultsPage(country){
     // Returns the country if the country is EN.
     if(country === "EN"){
-        document.getElementById("results").innerText = langData.en.results.results;
+        document.getElementById("result").innerText = langData.en.results.results;
         return;
     }
-    document.getElementById("results").innerText = langData.nl.results.results;
+    document.getElementById("result").innerText = langData.nl.results.results;
     return;
 }
 
@@ -196,6 +206,14 @@ const langData = {
         },
         "results":{
             "results":"resultaten"
+        },
+        "portfolio":{
+            "de7dwergentext":"Dit is het eerste project waar we aan hebben mogen werken. In dit project werkte we met 4 mensen aan 1 website. Ik had de voor pagina gedaan, het login systeem en het contact form. Hierbij heb ik Node.js en mongoDB gebruikt om gegevens op te slaan en om emails te versturen vanuit de website.",
+            "portfoliotext":"Dit is de website waar je momenteel op zit. Dit was ook gemaakt voor een school project. Hier heb alleen ik aan gewerkt. Zelf een stijl bedenken was best moeilijk maar ik ben behoorlijk tevreden met het resultaat. Het was ook een nieuwe ervaring met een website hosten.",
+            "assign43":"Opdracht 4.3",
+            "assign43text":"Hier kregen we de opdracht om een website te maken waar we integratie van dingen zoals dark mode moesten doen. Dit was een redelijk simpele opdracht maar het was als nog leuk om te doen.",
+            "assign13":"Opdracht 1.3",
+            "assign13text":"Deze opdracht ging vooral over het maken van een layout van een website. Dit is werk dat ik meestal wat minder vind omdat het vooral veel proberen is. Maar een een kleinen 2 uurtje had ik de website in elkaar. Ook moesten we de gebruiken naar hun naam vragen en dat in de website verwerken."
         }
     },
     "en":{
@@ -226,6 +244,14 @@ const langData = {
         },
         "results":{
             "results":"results"
+        },
+        "portfolio":{
+            "de7dwergentext":"This was the first project that we worked on. In this project we worked with 4 people on 1 website. I did the homepage, login system and made the contact page work. For this I used Node.js and mongoDB to store data and to send emails from the contact page to the user.",
+            "portfoliotext":"This is the website you are currently on. This is also a school project. I worked on this website myself. Making my own style was quite difficult but I am pretty happy with how it turned out. It was also a new experience with hosting a website.",
+            "assign43":"Assignment 4.3",
+            "assign43text":"Here we had the assignment to create a website that has dark mode. It was a pretty simple assignment but it was pretty fun to do.",
+            "assign13":"Assignment 1.3",
+            "assign13text":"This assignment was mainly just to practise making the layout of a website. This type of work I find kind of boring because it's a lot of trying. But after 2 short hours I had the finished website. We also had to use the users name and show a hello message with the name."
         }
     }
 }

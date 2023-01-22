@@ -1,0 +1,353 @@
+/*
+    Made by: Justin Lama Perez
+    Date: 09-01-2023
+*/
+/* This block of code applies a smooth transition effect to all elements on the page. */
+*{
+    transition: all 0.35s;
+    -webkit-transition: all 0.35s;
+    -moz-transition: all 0.35s;
+    -ms-transition: all 0.35s;
+    -o-transition: all 0.35s;
+}
+/* Reset the margins and padding on the body element, set the background color to a dark blue, hide any overflow on the x-axis, and disable text selection */
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #141B25;
+    overflow-x:hidden;
+    user-select: none;
+}
+/* Position the nav element absolutely and make it the full width and height of the container */
+nav{
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: left;
+    z-index: 100;
+}
+ul
+{
+    padding-left: 0px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding-right: 40px;
+}
+/* Use flexbox to align the items in the navbar element vertically */
+#navbar{
+    display: flex;
+    align-items: center;
+}
+#navitems{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align: center;
+    z-index: 10000;
+}
+ul > li > a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    font-family: 'Cascadia Code';
+  
+}
+/* Absolute position the centerdiv, make it the full width of the container, and use flexbox to align its items vertically and horizontally */
+div.centerdiv{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    z-index: 3001;
+}
+div.typewriter > a {
+    text-decoration: none;
+}
+/* Use inline-flex to display the h1 element within the typewriter element, set the color and font, and add some spacing between the letters */
+div.typewriter > a > h1 {
+    display: inline-flex;
+    color: #8DD0E5;
+    font-family: 'Cascadia Code';
+    letter-spacing: 0.2em;
+    text-align: center;
+    font-size: 25px;
+    padding-left: 20px;
+    overflow: hidden;
+    border-right: .15em solid white;
+    animation: 
+        typing 1s steps(9, end),
+        blink-caret .75s step-end infinite;
+    z-index: 3007;
+}
+/* Animate the width of the text from 0 to 100% to create a typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+/* Animate the border color of the caret from transparent to white and back to create a blinking effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white; }
+}
+
+div.typewriter > a > h1 > span {
+    color:#E394FF;
+}
+
+nav > div > div#navItems{
+    display: none;
+}
+/* Add some padding to the left of the menubars element and display it as an inline block */
+#menubars {
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    z-index: 10001;
+}
+/* Set the width, height, and background color of the bar1, bar2, and bar3 elements */
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #C5C5C5;
+    margin: 6px 0;
+    transition: 0.4s;
+    display: flex;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+  
+/* Fade out the second bar */
+.change .bar2 {
+    opacity: 0;
+}
+  
+/* Rotate last bar */
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+#bgFade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(169.67deg, #1E3658 -5.37%, #141B25 66.67%);
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+img{
+    object-fit:fill;
+    height: 100vh;
+    text-align: center;
+}
+
+#mainText{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 99;
+    text-align: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    width: 100vw;
+}
+
+#mainText > h2{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 70%
+}
+#bgFade > div > h1{
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    text-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+    font-size: 8vw;
+    white-space: nowrap;
+
+}
+#bgFade > div > h2{
+    letter-spacing: 0.08em;
+    font-weight: 400;
+    text-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+    font-size: 5vw;
+    white-space: nowrap;
+}
+#languageselector
+{
+    display: flex;
+    position: absolute;
+    left: 30px;
+    cursor: pointer;
+    z-index: 3003;
+}
+#english{
+    width: 50px;
+    height: 34px;
+    display: none;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+#dutch{
+    width: 50px;
+    height: 34px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+#content
+{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+* {
+    scrollbar-width: none;
+    scrollbar-color: #969098 #ffffff;
+}
+
+  /* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 3px;
+}
+
+*::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #969098;
+    border-radius: 11px;
+    border: 3px solid rgba(0, 0, 0, 0);
+}
+a
+{
+    scroll-behavior: smooth;
+}
+.content
+{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 170px;
+    height: 4000px;
+    z-index: 40;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    -webkit-transform: translate(-50%, 0%);
+    -moz-transform: translate(-50%, 0%);
+    -ms-transform: translate(-50%, 0%);
+    -o-transform: translate(-50%, 0%);
+}
+
+.card-left, .card-right
+{
+    width: 90vw;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    background: linear-gradient(105.76deg, rgba(180, 59, 177, 0.3) 11.18%, rgba(86, 29, 85, 0) 185.24%);
+    height: 650px;
+    margin-bottom: 30px;
+    border-radius: 30px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+}
+.text > h2
+{
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+}
+.text > p 
+{
+    font-family: 'Merriweather';
+    margin-top: 270px;
+}
+.codelangs
+{
+    width: 100%;
+    list-style-type: none;
+    text-align: center;
+    vertical-align: bottom;
+}
+.codelangs > ul
+{
+    list-style: none;
+    display: inline;
+    text-align: center;
+    white-space: nowrap;
+}
+.codelangs > ul > li
+{
+    display: inline;
+    padding: 5px 10px 5px 10px;
+    background-color: #6D2B6C;
+    border-radius: 20px;
+    font-family: 'Cascadia Code';
+}
+.codelangs > ul > li:last-of-type
+{
+    margin-right: -30px;
+}
+div.card-left > img 
+{
+    margin-top: 100px;
+    position: absolute;
+    aspect-ratio: 1.5 / 1;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+div.card-right > img 
+{
+    margin-top: 100px;
+    position: absolute;
+    aspect-ratio: 1.5 / 1;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}

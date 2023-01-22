@@ -1,0 +1,228 @@
+html
+{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #141B25;
+    user-select: none;
+    overflow-x:hidden;
+    scroll-behavior: smooth;
+
+}
+#bgFade{
+    position: absolute;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background: linear-gradient(169.67deg, #1E3658 -5.37%, #141B25 66.67%);
+    transition: all 0.35s;
+    -webkit-transition: all 0.35s;
+    -moz-transition: all 0.35s;
+    -ms-transition: all 0.35s;
+    -o-transition: all 0.35s;
+}
+#languageselector
+{
+    display: flex;
+    position: absolute;
+    right: 40px;
+    cursor: pointer;
+    z-index: 3010;
+    height: 34px;
+}
+#english{
+    display: none;
+    height: 34px;
+    width: 50px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+#dutch
+{
+    width: 50px;
+    height: 34px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+* {
+    scrollbar-width: none;
+    scrollbar-color: #969098 #ffffff;
+}
+
+  /* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 3px;
+}
+
+*::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #969098;
+    border-radius: 11px;
+    border: 3px solid rgba(0, 0, 0, 0);
+}
+a
+{
+    scroll-behavior: smooth;
+}
+.content
+{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 170px;
+    height: 1250px;
+    z-index: 40;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    -webkit-transform: translate(-50%, 0%);
+    -moz-transform: translate(-50%, 0%);
+    -ms-transform: translate(-50%, 0%);
+    -o-transform: translate(-50%, 0%);
+}
+.card-right, .card-left
+{
+    width: 1180px;
+    height: 420px;
+    background: linear-gradient(105.76deg, rgba(180, 59, 177, 0.3) 11.18%, rgba(86, 29, 85, 0) 185.24%);
+    backdrop-filter: blur(2px);
+    margin-bottom: 20px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    color: white;
+}
+.card-right > .text 
+{
+    height: 420px;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card-right > div > h2
+{
+    margin-top: 30px;
+    margin-left: 30px;
+    font-size: 40px;
+    font-family: 'Oswald', sans-serif;
+}
+.card-right > div > p
+{
+    margin-left: 30px;
+    width: 500px;
+    font-size: 17px;
+    font-family: 'Merriweather';
+}
+.card-right > img 
+{
+    height: 363px;
+    aspect-ratio: 1.5 / 1;
+    object-fit: cover;
+    position: relative;
+    float: right;
+    vertical-align: middle;
+    margin-right: 30px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    filter: drop-shadow(5px 5px 20px rgba(0,0,0,0.5));
+    -webkit-filter: drop-shadow(5px 5px 20px rgba(0,0,0,0.5));
+}
+.card-right > div.text > div.codelangs
+{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px;
+}
+.card-right > div.text > div > ul > li
+{
+    margin-left: 10px;
+    padding: 5px 10px 5px 10px;
+    background-color: #6D2B6C;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.card-left > .text
+{
+    height: 420px;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.card-left > .text > h2
+{
+    margin-top: 30px;
+    margin-left: 30px;
+    font-size: 40px;
+    font-family: 'Oswald', sans-serif;
+}
+.card-left > .text > p
+{
+    margin-left: 30px;
+    width: 500px;
+    font-size: 17px;
+    font-family: 'Merriweather';
+}
+.card-left > img 
+{
+    height: 363px;
+    aspect-ratio: 1.5 / 1;
+    object-fit: cover;
+    position: relative;
+    vertical-align: middle;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    filter: drop-shadow(5px 5px 20px rgba(0,0,0,0.5));
+    -webkit-filter: drop-shadow(5px 5px 20px rgba(0,0,0,0.5));
+}
+.card-left > .text > div.codelangs
+{
+    position: absolute;
+    bottom: 0;
+    margin-right: 60px;
+    margin-bottom: 20px;
+}
+.card-left > .text > .codelangs > ul > li
+{
+    margin-left: 10px;
+    padding: 5px 10px 5px 10px;
+    background-color: #6D2B6C;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}

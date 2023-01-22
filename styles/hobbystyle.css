@@ -222,7 +222,7 @@ footer{
     -moz-border-radius: 30px;
     -ms-border-radius: 30px;
     -o-border-radius: 30px;
-    background-color:#561d55;
+    background-color:rgba(86, 29, 85, 0.3);
     filter: drop-shadow(3px, 3px, 3px, 3px);
     -webkit-filter: drop-shadow(3px, 3px, 3px, 3px);
 }
@@ -233,7 +233,7 @@ footer{
 .card:hover
 {
     width: 62vw;
-    background-color:#742872;
+    background-color:rgba(116, 40, 114,0.7);
     transform: translate(0%, -4%);
     -webkit-transform: translate(0%, -4%);
     -moz-transform: translate(0%, -4%);
