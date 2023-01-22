@@ -172,6 +172,7 @@ function resultsPage(country){
     return;
 }
 
+
 const langData = {
     "_comment":{
         "Made_by":"Justin Lama Perez",

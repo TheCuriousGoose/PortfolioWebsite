@@ -30,6 +30,7 @@ function generateTable(table, data) {
         let row = table.insertRow();
         // Inserts multiple cells at once.
         for (key in element) {
+            // Creates a text node and appends it to the row
             let cell = row.insertCell();
             let text = document.createTextNode(element[key]);
             cell.appendChild(text);
