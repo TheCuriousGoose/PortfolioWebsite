@@ -153,8 +153,6 @@ function resultsPage(country){
         document.getElementById("results").innerText = langData.en.results.results;
         return;
     }
-<<<<<<< Updated upstream
-=======
     document.getElementById("results").innerText = langData.en.results.results;
     return;
 }
@@ -225,5 +223,4 @@ const langData = {
             "results":"results"
         }
     }
->>>>>>> Stashed changes
 }
