@@ -1,25 +1,27 @@
 /*
     Made by: Justin Lama Perez
     Date: 12-12-2022
-    Last change: 18-01-2023
+    Last change: 22-01-2023
 */
-
-// Asserts that the language data is json.
-import langData from './data/lang.json' assert {type: 'json'};
 
 var dutch = false;
 
 const el = document.querySelector("body");
 
 //Fetch user ip info with the use of jQuery
-$.get("http://ipinfo.io/?token=c5c3ed73a5eba7", function (response) {
-    // Checks if the response is NL.
-    if(response.country === 'NL'){
-        countryNL();
-    }else{
-        countryEN();
-    }
-}, "jsonp");
+
+try{
+    $.get("http://ipinfo.io/?token=c5c3ed73a5eba7", function (response) {
+        // Checks if the response is NL.
+        if(response.country === 'NL'){
+            countryNL();
+        }else{
+            countryEN();
+        }
+    }, "jsonp");    
+}catch(err){
+    countryNL();
+}
 
 // Displays the country selector
 document.getElementById("languageselector").onclick = function(){
@@ -96,46 +98,49 @@ function homePage(country){
     }
     document.getElementById("textboxtitle").innerText = langData.nl.home.thisisme;
     document.getElementById("textboxttext").innerText = langData.nl.home.thisismetext;
+    return;
 }
 // Returns the text of the page.
 function hobbyPage(country){
     // Returns the text of the current country.
     if(country === "EN"){
-        document.getElementById("title").innerText = langData.en.hobby.title
-        document.getElementById("covertextp1").innerText = langData.en.hobby.covertextp1
-        document.getElementById("covertextp2").innerText = langData.en.hobby.covertextp2
-        document.getElementById("gaming").innerText = langData.en.hobby.gaming
-        document.getElementById("gamingtext").innerText = langData.en.hobby.gamingtext
-        document.getElementById("woodworking").innerText = langData.en.hobby.woodworking
-        document.getElementById("woodworkingtext").innerText = langData.en.hobby.woodworkingtext
-        document.getElementById("aquaminitext").innerText = langData.en.hobby.aquaminitext
+        document.getElementById("title").innerText = langData.en.hobby.title;
+        document.getElementById("covertextp1").innerText = langData.en.hobby.covertextp1;
+        document.getElementById("covertextp2").innerText = langData.en.hobby.covertextp2;
+        document.getElementById("gaming").innerText = langData.en.hobby.gaming;
+        document.getElementById("gamingtext").innerText = langData.en.hobby.gamingtext;
+        document.getElementById("woodworking").innerText = langData.en.hobby.woodworking;
+        document.getElementById("woodworkingtext").innerText = langData.en.hobby.woodworkingtext;
+        document.getElementById("aquaminitext").innerText = langData.en.hobby.aquaminitext;
         return;
     }
-    document.getElementById("title").innerText = langData.nl.hobby.title
-    document.getElementById("covertextp1").innerText = langData.nl.hobby.covertextp1
-    document.getElementById("covertextp2").innerText = langData.nl.hobby.covertextp2
-    document.getElementById("gaming").innerText = langData.nl.hobby.gaming
-    document.getElementById("gamingtext").innerText = langData.nl.hobby.gamingtext
-    document.getElementById("woodworking").innerText = langData.nl.hobby.woodworking
-    document.getElementById("woodworkingtext").innerText = langData.nl.hobby.woodworkingtext
-    document.getElementById("aquaminitext").innerText = langData.nl.hobby.aquaminitext
+    document.getElementById("title").innerText = langData.nl.hobby.title;
+    document.getElementById("covertextp1").innerText = langData.nl.hobby.covertextp1;
+    document.getElementById("covertextp2").innerText = langData.nl.hobby.covertextp2;
+    document.getElementById("gaming").innerText = langData.nl.hobby.gaming;
+    document.getElementById("gamingtext").innerText = langData.nl.hobby.gamingtext;
+    document.getElementById("woodworking").innerText = langData.nl.hobby.woodworking;
+    document.getElementById("woodworkingtext").innerText = langData.nl.hobby.woodworkingtext;
+    document.getElementById("aquaminitext").innerText = langData.nl.hobby.aquaminitext;
+    return;
 }
 // Get experiences page for a country.
 function experiencesPage(country){
     // Returns the country if the country is EN.
     if(country === "EN"){
-        document.getElementById("deregenboog").innerText = langData.en.experiences.deregenboog
-        document.getElementById("merletcollege").innerText = langData.en.experiences.merletcollege
-        document.getElementById("action").innerText = langData.en.experiences.action
-        document.getElementById("de7dwergen").innerText = langData.en.experiences.de7dwergen
-        document.getElementById("kw1c").innerText = langData.en.experiences.kw1c
+        document.getElementById("deregenboog").innerText = langData.en.experiences.deregenboog;
+        document.getElementById("merletcollege").innerText = langData.en.experiences.merletcollege;
+        document.getElementById("action").innerText = langData.en.experiences.action;
+        document.getElementById("de7dwergen").innerText = langData.en.experiences.de7dwergen;
+        document.getElementById("kw1c").innerText = langData.en.experiences.kw1c;
         return;
     }
-    document.getElementById("deregenboog").innerText = langData.nl.experiences.deregenboog
-    document.getElementById("merletcollege").innerText = langData.nl.experiences.merletcollege
-    document.getElementById("action").innerText = langData.nl.experiences.action
-    document.getElementById("de7dwergen").innerText = langData.nl.experiences.de7dwergen
-    document.getElementById("kw1c").innerText = langData.nl.experiences.kw1c
+    document.getElementById("deregenboog").innerText = langData.nl.experiences.deregenboog;
+    document.getElementById("merletcollege").innerText = langData.nl.experiences.merletcollege;
+    document.getElementById("action").innerText = langData.nl.experiences.action;
+    document.getElementById("de7dwergen").innerText = langData.nl.experiences.de7dwergen;
+    document.getElementById("kw1c").innerText = langData.nl.experiences.kw1c;
+    return;
 }
 // Returns portfolio page for a given country
 function portfolioPage(country){
@@ -144,14 +149,17 @@ function portfolioPage(country){
         
         return;
     }
+    return;
 }
 // Returns the results page for the given country.
 function resultsPage(country){
     // Returns the country if the country is EN.
     if(country === "EN"){
-        
+        document.getElementById("result").innerText = langData.en.results.results;
         return;
     }
+    document.getElementById("result").innerText = langData.nl.results.results;
+    return;
 }
 
 const langData = {
@@ -185,6 +193,9 @@ const langData = {
             "action":"Dit was mijn eerste bijbaantje. Persoonlijk vond ik het vakkenvullen helemaal niks. Maar ik had wel hier geleerd dat ik hard moet werken. Naar 4 maanden in dienst te zijn had ik onslag genomen omdat ik niet blij op werk was.",
             "de7dwergen":"Bij De 7 dwergen was ik begonnen te werken naar een paar maanden niet gewerkt te hebben. Ik was hier begonnen in de afwas en naar een maand of 2 ben ik door gestroomd naar de keuken als keukenhulp. Ik werk tot het heden nog steeds.",
             "kw1c":"Dit is de school waar ik momenteel de opleiding Software Developer. Zo ver is de school redelijk fijn en heb ik een gezellig klas. Ik zit in jaar 1. Het is een niveau 4 MBO opleiding."
+        },
+        "results":{
+            "results":"resultaten"
         }
     },
     "en":{
@@ -212,6 +223,9 @@ const langData = {
             "action":"This was my first parttime job. Personally I didn't like stocking shelves at all. But I did learn there that you have to work hard. After 4 months of working there I quited because I didn't doing my job anymore.",
             "de7dwergen":"I started working at De 7 Dwergen after not having worked for a few months. I started as a dishwasher but after 2 months I went slowly transitioned to the kitchen where I now help. To this day I still work there.",
             "kw1c":"This is my current school where I follow the study Software Developer. So far this school has been enjoyable and I have fun classmates to be around. I am currently in year 1. This is a niveau 4 MBO study."
+        },
+        "results":{
+            "results":"results"
         }
     }
 }
