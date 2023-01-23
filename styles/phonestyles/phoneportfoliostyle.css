@@ -265,7 +265,7 @@ a
     flex-direction: column;
     position: absolute;
     top: 170px;
-    height: 4000px;
+    height: autopx;
     z-index: 40;
     left: 50%;
     transform: translate(-50%, 0%);
@@ -283,7 +283,7 @@ a
     justify-content: center;
     color: white;
     background: linear-gradient(105.76deg, rgba(180, 59, 177, 0.3) 11.18%, rgba(86, 29, 85, 0) 185.24%);
-    height: 650px;
+    height: auto;
     margin-bottom: 30px;
     border-radius: 30px;
     text-align: center;
@@ -305,6 +305,7 @@ a
     list-style-type: none;
     text-align: center;
     vertical-align: bottom;
+    margin-bottom: 20px;
 }
 .codelangs > ul
 {
@@ -350,4 +351,9 @@ div.card-right > img
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+}
+footer{
+    display: block;
+    top: calc(2200px + 180px);
+    z-index: 300;
 }

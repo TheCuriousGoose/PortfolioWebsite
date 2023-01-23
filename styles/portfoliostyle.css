@@ -226,3 +226,7 @@ a
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
 }
+footer{
+    top: calc(1800px + 180px);
+    z-index: 300;
+}

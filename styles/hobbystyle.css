@@ -98,7 +98,7 @@ div.left
     position: absolute;
     top: 80px;
     width: 50vw;
-    height: 85vh;
+    height: 100vh;
     justify-content: center;
     align-items: center;
 }
@@ -108,7 +108,7 @@ div.right
     top: 80px;
     right: 0;
     width: 50vw;
-    height: 85vh;
+    height: 100vh;
     margin: 0 2vw 0 2vw;
 }
 div.left > img 
@@ -193,13 +193,15 @@ div.right > p
     }
 }
 footer{
-    top: calc(190vh + 180px);
+    top: calc(2400px + 180px);
 }
 #content
 {
+    position: absolute;
     display: flex;
     height: 100vh;
     width: 100vw;
+    top: 100vh;
 }
 .hobbys
 {
