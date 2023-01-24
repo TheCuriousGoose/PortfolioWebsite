@@ -193,7 +193,7 @@ div.right > p
     }
 }
 footer{
-    top: calc(2400px + 180px);
+    top: calc(180vh + 180px);
 }
 #content
 {

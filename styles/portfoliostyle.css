@@ -215,6 +215,10 @@ a
     margin-right: 60px;
     margin-bottom: 20px;
 }
+.text > .codelangs > ul:hover
+{
+    color: white;   
+}
 .card-left > .text > .codelangs > ul > li
 {
     margin-left: 10px;

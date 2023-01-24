@@ -50,7 +50,6 @@ function countryNL()
     //Change navbar language
     document.getElementById("hobby").innerText = langData.nl.navhobby
     document.getElementById("experience").innerText = langData.nl.navexperiences
-    document.getElementById("results").innerText = langData.nl.navresults
 
     pageSelector("NL")
 }
@@ -63,7 +62,6 @@ function countryEN()
     //Change navbar language
     document.getElementById("hobby").innerText = langData.en.navhobby;
     document.getElementById("experience").innerText = langData.en.navexperiences;
-    document.getElementById("results").innerText = langData.en.navresults;
 
     pageSelector("EN");
 }
@@ -81,9 +79,6 @@ function pageSelector(country){
     }
     if(el.dataset.pageName === 'portfolio'){
         return portfolioPage(country);
-    }
-    if(el.dataset.pageName === 'results'){
-        return resultsPage(country);
     }
 }
 
@@ -161,17 +156,6 @@ function portfolioPage(country){
     document.getElementById("assign1.3text").innerText = langData.nl.portfolio.assign13text
     return;
 }
-// Returns the results page for the given country.
-function resultsPage(country){
-    // Returns the country if the country is EN.
-    if(country === "EN"){
-        document.getElementById("result").innerText = langData.en.results.results;
-        return;
-    }
-    document.getElementById("result").innerText = langData.nl.results.results;
-    return;
-}
-
 
 const langData = {
     "_comment":{
@@ -204,9 +188,6 @@ const langData = {
             "action":"Dit was mijn eerste bijbaantje. Persoonlijk vond ik het vakkenvullen helemaal niks. Maar ik had wel hier geleerd dat ik hard moet werken. Naar 4 maanden in dienst te zijn had ik onslag genomen omdat ik niet blij op werk was.",
             "de7dwergen":"Bij De 7 dwergen was ik begonnen te werken naar een paar maanden niet gewerkt te hebben. Ik was hier begonnen in de afwas en naar een maand of 2 ben ik door gestroomd naar de keuken als keukenhulp. Ik werk tot het heden nog steeds.",
             "kw1c":"Dit is de school waar ik momenteel de opleiding Software Developer. Zo ver is de school redelijk fijn en heb ik een gezellig klas. Ik zit in jaar 1. Het is een niveau 4 MBO opleiding."
-        },
-        "results":{
-            "results":"resultaten"
         },
         "portfolio":{
             "de7dwergentext":"Dit is het eerste project waar we aan hebben mogen werken. In dit project werkte we met 4 mensen aan 1 website. Ik had de voor pagina gedaan, het login systeem en het contact form. Hierbij heb ik Node.js en mongoDB gebruikt om gegevens op te slaan en om emails te versturen vanuit de website.",
@@ -242,9 +223,6 @@ const langData = {
             "action":"This was my first parttime job. Personally I didn't like stocking shelves at all. But I did learn there that you have to work hard. After 4 months of working there I quited because I didn't doing my job anymore.",
             "de7dwergen":"I started working at De 7 Dwergen after not having worked for a few months. I started as a dishwasher but after 2 months I went slowly transitioned to the kitchen where I now help. To this day I still work there.",
             "kw1c":"This is my current school where I follow the study Software Developer. So far this school has been enjoyable and I have fun classmates to be around. I am currently in year 1. This is a niveau 4 MBO study."
-        },
-        "results":{
-            "results":"results"
         },
         "portfolio":{
             "de7dwergentext":"This was the first project that we worked on. In this project we worked with 4 people on 1 website. I did the homepage, login system and made the contact page work. For this I used Node.js and mongoDB to store data and to send emails from the contact page to the user.",
